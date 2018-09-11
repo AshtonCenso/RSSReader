@@ -18,6 +18,13 @@
 		3037DE5D2146C730000EC204 /* FeedListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE5C2146C730000EC204 /* FeedListRouter.swift */; };
 		3037DE5F2146C74C000EC204 /* FeedListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE5E2146C74C000EC204 /* FeedListEntity.swift */; };
 		30BC901C2147DD6800EAE5F4 /* FeedListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */; };
+		30BC901F2147FDF000EAE5F4 /* FeedFavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC901E2147FDF000EAE5F4 /* FeedFavoriteListViewController.swift */; };
+		30BC90212147FDFA00EAE5F4 /* FeedFavoriteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC90202147FDFA00EAE5F4 /* FeedFavoriteListInteractor.swift */; };
+		30BC90232147FE0600EAE5F4 /* FeedFavoriteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC90222147FE0600EAE5F4 /* FeedFavoriteListPresenter.swift */; };
+		30BC90252147FE1300EAE5F4 /* FeedFavoriteListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC90242147FE1300EAE5F4 /* FeedFavoriteListRouter.swift */; };
+		30BC90272147FE2000EAE5F4 /* FeedFavoriteListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC90262147FE2000EAE5F4 /* FeedFavoriteListEntity.swift */; };
+		30BC9029214812C900EAE5F4 /* FeedFavoriteListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC9028214812C900EAE5F4 /* FeedFavoriteListViewProtocol.swift */; };
+		30BC902B21481C8300EAE5F4 /* CustomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC902A21481C8300EAE5F4 /* CustomActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		3037DE5C2146C730000EC204 /* FeedListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListRouter.swift; sourceTree = "<group>"; };
 		3037DE5E2146C74C000EC204 /* FeedListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListEntity.swift; sourceTree = "<group>"; };
 		30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewProtocol.swift; sourceTree = "<group>"; };
+		30BC901E2147FDF000EAE5F4 /* FeedFavoriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFavoriteListViewController.swift; sourceTree = "<group>"; };
+		30BC90202147FDFA00EAE5F4 /* FeedFavoriteListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFavoriteListInteractor.swift; sourceTree = "<group>"; };
+		30BC90222147FE0600EAE5F4 /* FeedFavoriteListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFavoriteListPresenter.swift; sourceTree = "<group>"; };
+		30BC90242147FE1300EAE5F4 /* FeedFavoriteListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFavoriteListRouter.swift; sourceTree = "<group>"; };
+		30BC90262147FE2000EAE5F4 /* FeedFavoriteListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFavoriteListEntity.swift; sourceTree = "<group>"; };
+		30BC9028214812C900EAE5F4 /* FeedFavoriteListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFavoriteListViewProtocol.swift; sourceTree = "<group>"; };
+		30BC902A21481C8300EAE5F4 /* CustomActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +82,8 @@
 			children = (
 				3037DE432146BDF2000EC204 /* AppDelegate.swift */,
 				3037DE452146BDF2000EC204 /* ViewController.swift */,
+				30BC902A21481C8300EAE5F4 /* CustomActivity.swift */,
+				30BC901D2147FDC700EAE5F4 /* FeedFavoriteList */,
 				3037DE552146C10A000EC204 /* PostList */,
 				3037DE472146BDF2000EC204 /* Main.storyboard */,
 				3037DE4A2146BDF3000EC204 /* Assets.xcassets */,
@@ -88,6 +104,19 @@
 				30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */,
 			);
 			path = PostList;
+			sourceTree = "<group>";
+		};
+		30BC901D2147FDC700EAE5F4 /* FeedFavoriteList */ = {
+			isa = PBXGroup;
+			children = (
+				30BC901E2147FDF000EAE5F4 /* FeedFavoriteListViewController.swift */,
+				30BC90202147FDFA00EAE5F4 /* FeedFavoriteListInteractor.swift */,
+				30BC90222147FE0600EAE5F4 /* FeedFavoriteListPresenter.swift */,
+				30BC90242147FE1300EAE5F4 /* FeedFavoriteListRouter.swift */,
+				30BC90262147FE2000EAE5F4 /* FeedFavoriteListEntity.swift */,
+				30BC9028214812C900EAE5F4 /* FeedFavoriteListViewProtocol.swift */,
+			);
+			path = FeedFavoriteList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,13 +190,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30BC902B21481C8300EAE5F4 /* CustomActivity.swift in Sources */,
 				3037DE5D2146C730000EC204 /* FeedListRouter.swift in Sources */,
 				3037DE462146BDF2000EC204 /* ViewController.swift in Sources */,
 				30BC901C2147DD6800EAE5F4 /* FeedListViewProtocol.swift in Sources */,
 				3037DE572146C122000EC204 /* FeedListViewController.swift in Sources */,
 				3037DE592146C713000EC204 /* FeedListInteractor.swift in Sources */,
 				3037DE5B2146C720000EC204 /* FeedListPresenter.swift in Sources */,
+				30BC90272147FE2000EAE5F4 /* FeedFavoriteListEntity.swift in Sources */,
+				30BC90232147FE0600EAE5F4 /* FeedFavoriteListPresenter.swift in Sources */,
 				3037DE442146BDF2000EC204 /* AppDelegate.swift in Sources */,
+				30BC90252147FE1300EAE5F4 /* FeedFavoriteListRouter.swift in Sources */,
+				30BC901F2147FDF000EAE5F4 /* FeedFavoriteListViewController.swift in Sources */,
+				30BC90212147FDFA00EAE5F4 /* FeedFavoriteListInteractor.swift in Sources */,
+				30BC9029214812C900EAE5F4 /* FeedFavoriteListViewProtocol.swift in Sources */,
 				3037DE5F2146C74C000EC204 /* FeedListEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

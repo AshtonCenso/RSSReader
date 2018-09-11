@@ -14,5 +14,5 @@ protocol FeedListViewProtocol {
     
     func hideLoading()
     
-    func showData(data: Array<FeedListEntity>)
+    func showData(data: [FeedListEntity])
 }

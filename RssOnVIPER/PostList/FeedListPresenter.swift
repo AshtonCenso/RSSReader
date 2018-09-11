@@ -8,16 +8,16 @@
 
 import Foundation
 
-class FeedListPresenter {
+class FeedListPresenter:FeedListRouterProtocol {
     
     private let view: FeedListViewProtocol
     private let router: FeedListRouterProtocol
     
     private let loadFeedInteractor: FeedListInteractorProtocol = FeedListInteractor()
     
-    private var feed: Array<FeedListEntity>? = nil
+    private var feed: [FeedListEntity]? = nil
     
-    init(withView view: FeedListViewProtocol, withRouter router: FeedListRouterProtocol) {
+    init(withView view: FeedListViewProtocol, withRouter router: FeedListRouterProtocol ) {
         self.view = view
         self.router = router
     }
@@ -30,7 +30,11 @@ class FeedListPresenter {
     }
     
     func onItemClicked(position: Int) {
-        print("HUI "+" \(position)")
+        print("\(position)")
         router.openDetails(item: feed![position])
+    }
+    
+    func openDetails(item: FeedListEntity) {
+        print("openDetails FeedListPresenter")
     }
 }

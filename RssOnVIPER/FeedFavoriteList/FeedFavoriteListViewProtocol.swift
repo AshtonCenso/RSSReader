@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+protocol FeedFavoriteListViewProtocol {
+    
+    func showLoading()
+    
+    func hideLoading()
+    
+    func showData(data: [FeedListFavoriteEntity])
+}

@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol FeedFavoriteListRouter {
+    
+    func openDetails(item: FeedListFavoriteEntity)
+}

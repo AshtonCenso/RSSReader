@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+class FeedListFavoriteEntity {
+    
+    init(title: String, description: String, image: String?) {
+        self.title = title
+        self.description = description
+        self.image = image
+    }
+    
+    var image: String?
+    var title: String
+    var description: String
+}

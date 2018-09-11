@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+protocol FeedFavoriteListInteractorProtocol {
+    
+    func loadFeed() -> [FeedListFavoriteEntity]
+}
+
+class FeedFavoriteListInteractor : FeedFavoriteListInteractorProtocol {
+    
+    func loadFeed() -> [FeedListFavoriteEntity] {
+        return Array()
+    }
+    
+}

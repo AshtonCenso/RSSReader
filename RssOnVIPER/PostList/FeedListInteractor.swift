@@ -10,12 +10,12 @@ import Foundation
 
 protocol FeedListInteractorProtocol {
     
-    func loadFeed() -> Array<FeedListEntity>
+    func loadFeed() -> [FeedListEntity]
 }
 
 class FeedListInteractor : FeedListInteractorProtocol {
     
-    func loadFeed() -> Array<FeedListEntity> {
+    func loadFeed() -> [FeedListEntity] {
         return Array()
     }
     
