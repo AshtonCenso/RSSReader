@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CustomActivity: UIActivity {
+class CustomActivityIndicator: UIActivityIndicatorView {
     
     func initActivity(start: Bool, view: UIView) {
         let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
