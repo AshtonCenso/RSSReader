@@ -16,6 +16,7 @@
 		3037DE5B2146C720000EC204 /* FeedListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE5A2146C720000EC204 /* FeedListPresenter.swift */; };
 		3037DE5D2146C730000EC204 /* FeedListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE5C2146C730000EC204 /* FeedListRouter.swift */; };
 		3037DE5F2146C74C000EC204 /* FeedListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE5E2146C74C000EC204 /* FeedListEntity.swift */; };
+		306553692151362100BD4CCF /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306553682151362100BD4CCF /* TableViewManager.swift */; };
 		30BC901C2147DD6800EAE5F4 /* FeedListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */; };
 		7B757966BFAB9122BFDE0F3C /* Pods_RssOnVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87C6AB0E9E057D559994951 /* Pods_RssOnVIPER.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		3037DE5A2146C720000EC204 /* FeedListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListPresenter.swift; sourceTree = "<group>"; };
 		3037DE5C2146C730000EC204 /* FeedListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListRouter.swift; sourceTree = "<group>"; };
 		3037DE5E2146C74C000EC204 /* FeedListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListEntity.swift; sourceTree = "<group>"; };
+		306553682151362100BD4CCF /* TableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
 		30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewProtocol.swift; sourceTree = "<group>"; };
 		7AE48E5B77205B9E27236FF0 /* Pods-RssOnVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssOnVIPER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER.debug.xcconfig"; sourceTree = "<group>"; };
 		BE61EFF3445EB9605AEA717D /* Pods-RssOnVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssOnVIPER.release.xcconfig"; path = "Pods/Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				30007A44214BBF9700F76037 /* Router */,
 				30007A45214BC02100F76037 /* Entities */,
 				30007A46214BC02800F76037 /* Protocol */,
+				306553682151362100BD4CCF /* TableViewManager.swift */,
 			);
 			path = FeedListModule;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				3037DE3C2146BDF2000EC204 /* Sources */,
 				3037DE3D2146BDF2000EC204 /* Frameworks */,
 				3037DE3E2146BDF2000EC204 /* Resources */,
+				3065536A2151791300BD4CCF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -243,20 +247,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		78342EFE6964C0B33863BAE2 /* [CP] Check Pods Manifest.lock */ = {
+		3065536A2151791300BD4CCF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nexit 1\nfi";
+		};
+		78342EFE6964C0B33863BAE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RssOnVIPER-checkManifestLockResult.txt",
 			);
@@ -279,6 +292,7 @@
 				3037DE5B2146C720000EC204 /* FeedListPresenter.swift in Sources */,
 				3037DE442146BDF2000EC204 /* AppDelegate.swift in Sources */,
 				3037DE5F2146C74C000EC204 /* FeedListEntity.swift in Sources */,
+				306553692151362100BD4CCF /* TableViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

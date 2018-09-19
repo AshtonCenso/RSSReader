@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,12 +13,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1190763E3A6711F5B8854EFE5F0D9A89 /* Pods_RssOnVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RssOnVIPER.framework; path = "Pods-RssOnVIPER.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1190763E3A6711F5B8854EFE5F0D9A89 /* Pods_RssOnVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RssOnVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		302AEF4F214FFB2000B4130B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		302AEF50214FFB2000B4130B /* swiftlint */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = swiftlint; sourceTree = "<group>"; };
 		379ADDBF8062D5DDCA9A45F09F659EE4 /* Pods-RssOnVIPER-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RssOnVIPER-dummy.m"; sourceTree = "<group>"; };
 		59F7656F31035390688D6F649D6B7167 /* Pods-RssOnVIPER-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RssOnVIPER-resources.sh"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5D8B9EFDFC55D0AF0E51DC93F13EDEF5 /* Pods-RssOnVIPER-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RssOnVIPER-acknowledgements.markdown"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A588AFBCE33860CC3771120B9EF093D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B02ACBCFCC83FAD3ABDCFA60DFE935AB /* Pods-RssOnVIPER-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RssOnVIPER-frameworks.sh"; sourceTree = "<group>"; };
 		C380F8A158F6F4871B2662021ADD044A /* Pods-RssOnVIPER-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RssOnVIPER-umbrella.h"; sourceTree = "<group>"; };
@@ -66,11 +68,19 @@
 			path = "Target Support Files/Pods-RssOnVIPER";
 			sourceTree = "<group>";
 		};
+		302AEF4E214FFB2000B4130B /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				302AEF4F214FFB2000B4130B /* LICENSE */,
+				302AEF50214FFB2000B4130B /* swiftlint */,
+			);
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
 		32A23E08346748F1793F899C5FF672C1 /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = SwiftLint;
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
@@ -112,6 +122,7 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				302AEF4E214FFB2000B4130B /* SwiftLint */,
 				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
@@ -215,11 +226,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-RssOnVIPER/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER.modulemap";
 				OTHER_LDFLAGS = "";
@@ -377,11 +384,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-RssOnVIPER/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER.modulemap";
 				OTHER_LDFLAGS = "";

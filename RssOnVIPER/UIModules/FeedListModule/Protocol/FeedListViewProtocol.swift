@@ -6,9 +6,9 @@
 //  Copyright © 2018 Anton Tsykanov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-protocol FeedListViewProtocol : class {
+protocol FeedListViewProtocol: class {
     func showLoading()
     func hideLoading()
     func showData(data: [FeedVM])

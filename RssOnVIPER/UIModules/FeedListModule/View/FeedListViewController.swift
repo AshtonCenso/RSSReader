@@ -8,22 +8,25 @@
 
 import UIKit
 
-class FeedListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FeedListViewProtocol, FeedListRouterProtocol {
-
-    private lazy var presenter: FeedListPresenter = FeedListPresenter(withView: self, withRouter: self)
+class FeedListViewController: UIViewController, FeedListViewProtocol, FeedListRouterProtocol {
     
+//    lazy var presenter: FeedListPresenter = FeedListPresenter(withView: self, withRouter: self)
     @IBOutlet var postListTableView: UITableView!
-    
-    var feedList:[FeedVM] = []
+    var tableViewCustom: TableViewManager = TableViewManager(data: [])
+    var presenter: FeedListPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.onViewLoaded()
+        
+        postListTableView.delegate = tableViewCustom
+        postListTableView.dataSource = tableViewCustom
+        
+        presenter?.onViewLoaded()
     }
     
     // MARK: FeedListViewProtocol
     func showLoading() {
-        print("showLoading FeedListViewController")
+        print(#function)
     }
     
     func hideLoading() {
@@ -31,7 +34,9 @@ class FeedListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func showData(data: [FeedVM]) {
-        feedList = data
+        print("showData FeedListViewController")
+        let data2 = [1, 2, 3, 4] //only for test custom TableView class
+        tableViewCustom = TableViewManager(data: data2)
         postListTableView.reloadData()
     }
     
@@ -39,21 +44,4 @@ class FeedListViewController: UIViewController, UITableViewDataSource, UITableVi
     func openDetails(item: FeedVM) {
         print("OpenDetails FeedListViewController")
     }
-    
-    // MARK: TableView
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return feedList.count
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath as IndexPath)
-        cell.selectionStyle = .none
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.onItemClicked(position: indexPath.row)
-    }
-    
 }

@@ -8,10 +8,8 @@
 
 import Foundation
 
-class FeedListInteractor : FeedListInteractorProtocol {
-    
+class FeedListInteractor: FeedListInteractorProtocol {
     func loadFeed() -> [FeedVM] {
         return Array()
     }
-    
 }

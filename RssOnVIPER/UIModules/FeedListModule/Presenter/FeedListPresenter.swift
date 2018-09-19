@@ -6,23 +6,19 @@
 //  Copyright © 2018 Anton Tsykanov. All rights reserved.
 //
 
-import Foundation
-
-class FeedListPresenter:FeedListRouterProtocol {
-
+class FeedListPresenter {
+    
     private let view: FeedListViewProtocol
     private let router: FeedListRouterProtocol
-    
     private let loadFeedInteractor: FeedListInteractorProtocol = FeedListInteractor()
-    
-    private var feed: [FeedVM]? = nil
+    private var feed: [FeedVM]? = []
     
     init(withView view: FeedListViewProtocol, withRouter router: FeedListRouterProtocol ) {
         self.view = view
         self.router = router
     }
     
-    func onViewLoaded(){
+    func onViewLoaded() {
         view.showLoading()
         feed = loadFeedInteractor.loadFeed()
         view.hideLoading()
