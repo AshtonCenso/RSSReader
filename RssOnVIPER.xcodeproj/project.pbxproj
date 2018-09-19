@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3037DE442146BDF2000EC204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE432146BDF2000EC204 /* AppDelegate.swift */; };
-		3037DE462146BDF2000EC204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE452146BDF2000EC204 /* ViewController.swift */; };
 		3037DE492146BDF2000EC204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3037DE472146BDF2000EC204 /* Main.storyboard */; };
 		3037DE4B2146BDF3000EC204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3037DE4A2146BDF3000EC204 /* Assets.xcassets */; };
 		3037DE4E2146BDF3000EC204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3037DE4C2146BDF3000EC204 /* LaunchScreen.storyboard */; };
@@ -17,20 +16,14 @@
 		3037DE5B2146C720000EC204 /* FeedListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE5A2146C720000EC204 /* FeedListPresenter.swift */; };
 		3037DE5D2146C730000EC204 /* FeedListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE5C2146C730000EC204 /* FeedListRouter.swift */; };
 		3037DE5F2146C74C000EC204 /* FeedListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE5E2146C74C000EC204 /* FeedListEntity.swift */; };
+		306553692151362100BD4CCF /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306553682151362100BD4CCF /* TableViewManager.swift */; };
 		30BC901C2147DD6800EAE5F4 /* FeedListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */; };
-		30BC901F2147FDF000EAE5F4 /* FeedFavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC901E2147FDF000EAE5F4 /* FeedFavoriteListViewController.swift */; };
-		30BC90212147FDFA00EAE5F4 /* FeedFavoriteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC90202147FDFA00EAE5F4 /* FeedFavoriteListInteractor.swift */; };
-		30BC90232147FE0600EAE5F4 /* FeedFavoriteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC90222147FE0600EAE5F4 /* FeedFavoriteListPresenter.swift */; };
-		30BC90252147FE1300EAE5F4 /* FeedFavoriteListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC90242147FE1300EAE5F4 /* FeedFavoriteListRouter.swift */; };
-		30BC90272147FE2000EAE5F4 /* FeedFavoriteListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC90262147FE2000EAE5F4 /* FeedFavoriteListEntity.swift */; };
-		30BC9029214812C900EAE5F4 /* FeedFavoriteListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC9028214812C900EAE5F4 /* FeedFavoriteListViewProtocol.swift */; };
-		30BC902B21481C8300EAE5F4 /* CustomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC902A21481C8300EAE5F4 /* CustomActivity.swift */; };
+		7B757966BFAB9122BFDE0F3C /* Pods_RssOnVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87C6AB0E9E057D559994951 /* Pods_RssOnVIPER.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3037DE402146BDF2000EC204 /* RssOnVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssOnVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3037DE432146BDF2000EC204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3037DE452146BDF2000EC204 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3037DE482146BDF2000EC204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3037DE4A2146BDF3000EC204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3037DE4D2146BDF3000EC204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,14 +33,11 @@
 		3037DE5A2146C720000EC204 /* FeedListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListPresenter.swift; sourceTree = "<group>"; };
 		3037DE5C2146C730000EC204 /* FeedListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListRouter.swift; sourceTree = "<group>"; };
 		3037DE5E2146C74C000EC204 /* FeedListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListEntity.swift; sourceTree = "<group>"; };
+		306553682151362100BD4CCF /* TableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
 		30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewProtocol.swift; sourceTree = "<group>"; };
-		30BC901E2147FDF000EAE5F4 /* FeedFavoriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFavoriteListViewController.swift; sourceTree = "<group>"; };
-		30BC90202147FDFA00EAE5F4 /* FeedFavoriteListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFavoriteListInteractor.swift; sourceTree = "<group>"; };
-		30BC90222147FE0600EAE5F4 /* FeedFavoriteListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFavoriteListPresenter.swift; sourceTree = "<group>"; };
-		30BC90242147FE1300EAE5F4 /* FeedFavoriteListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFavoriteListRouter.swift; sourceTree = "<group>"; };
-		30BC90262147FE2000EAE5F4 /* FeedFavoriteListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFavoriteListEntity.swift; sourceTree = "<group>"; };
-		30BC9028214812C900EAE5F4 /* FeedFavoriteListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFavoriteListViewProtocol.swift; sourceTree = "<group>"; };
-		30BC902A21481C8300EAE5F4 /* CustomActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivity.swift; sourceTree = "<group>"; };
+		7AE48E5B77205B9E27236FF0 /* Pods-RssOnVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssOnVIPER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER.debug.xcconfig"; sourceTree = "<group>"; };
+		BE61EFF3445EB9605AEA717D /* Pods-RssOnVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssOnVIPER.release.xcconfig"; path = "Pods/Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER.release.xcconfig"; sourceTree = "<group>"; };
+		E87C6AB0E9E057D559994951 /* Pods_RssOnVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RssOnVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +45,84 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B757966BFAB9122BFDE0F3C /* Pods_RssOnVIPER.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30007A41214BBF6700F76037 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3037DE562146C122000EC204 /* FeedListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30007A42214BBF8900F76037 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3037DE582146C713000EC204 /* FeedListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		30007A43214BBF9100F76037 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3037DE5A2146C720000EC204 /* FeedListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		30007A44214BBF9700F76037 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3037DE5C2146C730000EC204 /* FeedListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		30007A45214BC02100F76037 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3037DE5E2146C74C000EC204 /* FeedListEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		30007A46214BC02800F76037 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		30007A4D214BC59F00F76037 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3037DE432146BDF2000EC204 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		30007A4E214BC5CC00F76037 /* UIModules */ = {
+			isa = PBXGroup;
+			children = (
+				3037DE552146C10A000EC204 /* FeedListModule */,
+			);
+			path = UIModules;
+			sourceTree = "<group>";
+		};
 		3037DE372146BDF1000EC204 = {
 			isa = PBXGroup;
 			children = (
 				3037DE422146BDF2000EC204 /* RssOnVIPER */,
 				3037DE412146BDF2000EC204 /* Products */,
+				59763155CEB04DF58E96BF1D /* Pods */,
+				A35E3A88DFE0EA2D179891E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,11 +137,8 @@
 		3037DE422146BDF2000EC204 /* RssOnVIPER */ = {
 			isa = PBXGroup;
 			children = (
-				3037DE432146BDF2000EC204 /* AppDelegate.swift */,
-				3037DE452146BDF2000EC204 /* ViewController.swift */,
-				30BC902A21481C8300EAE5F4 /* CustomActivity.swift */,
-				30BC901D2147FDC700EAE5F4 /* FeedFavoriteList */,
-				3037DE552146C10A000EC204 /* PostList */,
+				30007A4D214BC59F00F76037 /* AppDelegate */,
+				30007A4E214BC5CC00F76037 /* UIModules */,
 				3037DE472146BDF2000EC204 /* Main.storyboard */,
 				3037DE4A2146BDF3000EC204 /* Assets.xcassets */,
 				3037DE4C2146BDF3000EC204 /* LaunchScreen.storyboard */,
@@ -93,30 +147,35 @@
 			path = RssOnVIPER;
 			sourceTree = "<group>";
 		};
-		3037DE552146C10A000EC204 /* PostList */ = {
+		3037DE552146C10A000EC204 /* FeedListModule */ = {
 			isa = PBXGroup;
 			children = (
-				3037DE562146C122000EC204 /* FeedListViewController.swift */,
-				3037DE582146C713000EC204 /* FeedListInteractor.swift */,
-				3037DE5A2146C720000EC204 /* FeedListPresenter.swift */,
-				3037DE5C2146C730000EC204 /* FeedListRouter.swift */,
-				3037DE5E2146C74C000EC204 /* FeedListEntity.swift */,
-				30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */,
+				30007A41214BBF6700F76037 /* View */,
+				30007A42214BBF8900F76037 /* Interactor */,
+				30007A43214BBF9100F76037 /* Presenter */,
+				30007A44214BBF9700F76037 /* Router */,
+				30007A45214BC02100F76037 /* Entities */,
+				30007A46214BC02800F76037 /* Protocol */,
+				306553682151362100BD4CCF /* TableViewManager.swift */,
 			);
-			path = PostList;
+			path = FeedListModule;
 			sourceTree = "<group>";
 		};
-		30BC901D2147FDC700EAE5F4 /* FeedFavoriteList */ = {
+		59763155CEB04DF58E96BF1D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				30BC901E2147FDF000EAE5F4 /* FeedFavoriteListViewController.swift */,
-				30BC90202147FDFA00EAE5F4 /* FeedFavoriteListInteractor.swift */,
-				30BC90222147FE0600EAE5F4 /* FeedFavoriteListPresenter.swift */,
-				30BC90242147FE1300EAE5F4 /* FeedFavoriteListRouter.swift */,
-				30BC90262147FE2000EAE5F4 /* FeedFavoriteListEntity.swift */,
-				30BC9028214812C900EAE5F4 /* FeedFavoriteListViewProtocol.swift */,
+				7AE48E5B77205B9E27236FF0 /* Pods-RssOnVIPER.debug.xcconfig */,
+				BE61EFF3445EB9605AEA717D /* Pods-RssOnVIPER.release.xcconfig */,
 			);
-			path = FeedFavoriteList;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A35E3A88DFE0EA2D179891E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E87C6AB0E9E057D559994951 /* Pods_RssOnVIPER.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3037DE522146BDF3000EC204 /* Build configuration list for PBXNativeTarget "RssOnVIPER" */;
 			buildPhases = (
+				78342EFE6964C0B33863BAE2 /* [CP] Check Pods Manifest.lock */,
 				3037DE3C2146BDF2000EC204 /* Sources */,
 				3037DE3D2146BDF2000EC204 /* Frameworks */,
 				3037DE3E2146BDF2000EC204 /* Resources */,
+				3065536A2151791300BD4CCF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -185,26 +246,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3065536A2151791300BD4CCF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nexit 1\nfi";
+		};
+		78342EFE6964C0B33863BAE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RssOnVIPER-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3037DE3C2146BDF2000EC204 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30BC902B21481C8300EAE5F4 /* CustomActivity.swift in Sources */,
 				3037DE5D2146C730000EC204 /* FeedListRouter.swift in Sources */,
-				3037DE462146BDF2000EC204 /* ViewController.swift in Sources */,
 				30BC901C2147DD6800EAE5F4 /* FeedListViewProtocol.swift in Sources */,
 				3037DE572146C122000EC204 /* FeedListViewController.swift in Sources */,
 				3037DE592146C713000EC204 /* FeedListInteractor.swift in Sources */,
 				3037DE5B2146C720000EC204 /* FeedListPresenter.swift in Sources */,
-				30BC90272147FE2000EAE5F4 /* FeedFavoriteListEntity.swift in Sources */,
-				30BC90232147FE0600EAE5F4 /* FeedFavoriteListPresenter.swift in Sources */,
 				3037DE442146BDF2000EC204 /* AppDelegate.swift in Sources */,
-				30BC90252147FE1300EAE5F4 /* FeedFavoriteListRouter.swift in Sources */,
-				30BC901F2147FDF000EAE5F4 /* FeedFavoriteListViewController.swift in Sources */,
-				30BC90212147FDFA00EAE5F4 /* FeedFavoriteListInteractor.swift in Sources */,
-				30BC9029214812C900EAE5F4 /* FeedFavoriteListViewProtocol.swift in Sources */,
 				3037DE5F2146C74C000EC204 /* FeedListEntity.swift in Sources */,
+				306553692151362100BD4CCF /* TableViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +434,7 @@
 		};
 		3037DE532146BDF3000EC204 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AE48E5B77205B9E27236FF0 /* Pods-RssOnVIPER.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -365,6 +454,7 @@
 		};
 		3037DE542146BDF3000EC204 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE61EFF3445EB9605AEA717D /* Pods-RssOnVIPER.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

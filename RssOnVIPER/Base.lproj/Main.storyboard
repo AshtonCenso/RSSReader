@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,27 +27,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VBB-K8-Fu9" id="iWY-t8-BKK">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTL-ju-q4o">
-                                                    <rect key="frame" x="166" y="11" width="85" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="PTL-ju-q4o" firstAttribute="bottom" secondItem="iWY-t8-BKK" secondAttribute="bottomMargin" id="7rB-Yk-jpi"/>
-                                                <constraint firstItem="PTL-ju-q4o" firstAttribute="centerY" secondItem="iWY-t8-BKK" secondAttribute="centerY" id="lCo-qr-VFj"/>
-                                                <constraint firstItem="PTL-ju-q4o" firstAttribute="leading" secondItem="iWY-t8-BKK" secondAttribute="leading" constant="166" id="tnD-hQ-oJX"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PTL-ju-q4o" secondAttribute="trailing" constant="20" symbolic="YES" id="zkW-xa-nqm"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qcQ-9B-pth"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pXI-9O-gjr"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,7 +44,7 @@
                     <tabBarItem key="tabBarItem" title="Feed list" id="Z0f-GO-SWT"/>
                     <navigationItem key="navigationItem" title="Feed list" id="bN5-WM-Hsu"/>
                     <connections>
-                        <outlet property="postListTableView" destination="0Yb-SS-Zqy" id="CY1-oX-WzN"/>
+                        <outlet property="postListTableView" destination="0Yb-SS-Zqy" id="5z6-53-NXL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,7 +54,7 @@
         <!--Favorite-->
         <scene sceneID="DAT-Dl-Eei">
             <objects>
-                <viewController id="Qnw-Ku-K17" customClass="FeedFavoriteListViewController" customModule="RssOnVIPER" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qnw-Ku-K17" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X9v-Qk-6iJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +119,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yVD-gN-uDO">
             <objects>
-                <tabBarController id="UmP-Yo-gjT" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="UmP-Yo-gjT" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Nv3-qT-bfm"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f5N-6b-X4W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
