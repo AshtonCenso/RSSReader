@@ -258,7 +258,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nexit 1\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect --quiet --config \"${SRCROOT}/_swiftlint.yml\" --path \"${SRCROOT}/RssOnVIPER\"\nswiftlint lint --quiet --config \"${SRCROOT}/_swiftlint.yml\" --path \"${SRCROOT}/RssOnVIPER\"\nelse\necho \"error: SwiftLint not installed, refer to installation instructions from https://github.com/realm/SwiftLint#installation\"\nexit 1\nfi";
 		};
 		78342EFE6964C0B33863BAE2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
