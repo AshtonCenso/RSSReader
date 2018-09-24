@@ -8,8 +8,18 @@
 
 import Foundation
 
-class FeedListInteractor: FeedListInteractorProtocol {
-    func loadFeed() -> [FeedVM] {
-        return Array()
+
+final class FeedListInteractor: FeedListPresenterToInteractorProtocol {
+    var presenter: FeedListInteractorToPresenterProtocol?
+
+    func loadFeed() {
+        let fakeService: LoadFakeData = LoadFakeData()
+        presenter?.loadedFeeds(feeds: fakeService.loadFakeData())
     }
+
+    func tempFuncForRouter() -> [FeedVM] {
+        let fakeService: LoadFakeData = LoadFakeData()
+        return fakeService.loadFakeData()
+    }
+
 }

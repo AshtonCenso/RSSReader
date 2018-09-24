@@ -8,16 +8,27 @@
 
 import UIKit
 
-protocol FeedListViewProtocol: class {
+// MARK: View <-> Presenter Protocols
+protocol FeedListPresenterToViewProtocol {
     func showLoading()
     func hideLoading()
     func showData(data: [FeedVM])
 }
 
-protocol FeedListInteractorProtocol {
-    func loadFeed() -> [FeedVM]
+protocol FeedListViewToPresenterProtocol {
+    func openFeedDetail() -> FeedVM
 }
 
-protocol FeedListRouterProtocol {
+// MARK: Presenter <-> Interactor Protocols
+protocol FeedListPresenterToInteractorProtocol {
+    func loadFeed()
+}
+
+protocol FeedListInteractorToPresenterProtocol {
+    func loadedFeeds(feeds: [FeedVM])
+}
+
+// MARK: Presenter <-> Router Protocols
+protocol FeedListPresenterToRouterProtocol {
     func openDetails(item: FeedVM)
 }

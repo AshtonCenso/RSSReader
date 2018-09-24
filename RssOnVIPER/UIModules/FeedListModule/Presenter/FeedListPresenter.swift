@@ -6,31 +6,25 @@
 //  Copyright © 2018 Anton Tsykanov. All rights reserved.
 //
 
-class FeedListPresenter {
-    
-    private let view: FeedListViewProtocol
-    private let router: FeedListRouterProtocol
-    private let loadFeedInteractor: FeedListInteractorProtocol = FeedListInteractor()
-    private var feed: [FeedVM]? = []
-    
-    init(withView view: FeedListViewProtocol, withRouter router: FeedListRouterProtocol ) {
-        self.view = view
-        self.router = router
-    }
-    
+final class FeedListPresenter: FeedListInteractorToPresenterProtocol, FeedListPresenterToRouterProtocol {
+
+
+    var view: FeedListPresenterToViewProtocol?
+    var router: FeedListPresenterToRouterProtocol?
+    var loadFeedInteractor: FeedListPresenterToInteractorProtocol?
+    private var feed: [FeedVM] = []
+
     func onViewLoaded() {
-        view.showLoading()
-        feed = loadFeedInteractor.loadFeed()
-        view.hideLoading()
-        view.showData(data: feed!)
+        view?.showLoading()
+        loadFeedInteractor?.loadFeed()
     }
-    
-    func onItemClicked(position: Int) {
-        print("FeedListPresenter position = \(position)")
-//        router.openDetails(item: feed![position])
+
+    func loadedFeeds(feeds: [FeedVM]) {
+        view?.hideLoading()
+        view?.showData(data: feeds)
     }
-    
+
     func openDetails(item: FeedVM) {
-        print("openDetails FeedListPresenter")
+        router?.openDetails(item: item)
     }
 }
