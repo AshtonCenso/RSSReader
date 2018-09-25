@@ -6,12 +6,24 @@
 //  Copyright © 2018 Anton Tsykanov. All rights reserved.
 //
 
-final class FeedListPresenter: FeedListInteractorToPresenterProtocol, FeedListPresenterToRouterProtocol {
+final class FeedListPresenter: FeedListInteractorToPresenterProtocol, FeedListPresenterToRouterProtocol, Injectable {
 
+    private var view: FeedListPresenterToViewProtocol?
+    private var router: FeedListPresenterToRouterProtocol?
+    private var loadFeedInteractor: FeedListPresenterToInteractorProtocol?
 
-    var view: FeedListPresenterToViewProtocol?
-    var router: FeedListPresenterToRouterProtocol?
-    var loadFeedInteractor: FeedListPresenterToInteractorProtocol?
+    struct Dependencies {
+        let view: FeedListPresenterToViewProtocol
+        let router: FeedListPresenterToRouterProtocol
+        let loadFeedInteractor: FeedListPresenterToInteractorProtocol
+    }
+
+    func inject(dependencies: FeedListPresenter.Dependencies) {
+        view = dependencies.view
+        router = dependencies.router
+        loadFeedInteractor = dependencies.loadFeedInteractor
+    }
+
     private var feed: [FeedVM] = []
 
     func onViewLoaded() {

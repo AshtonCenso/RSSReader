@@ -6,8 +6,6 @@
 //  Copyright © 2018 Anton Tsykanov. All rights reserved.
 //
 
-import UIKit
-
 // MARK: View <-> Presenter Protocols
 protocol FeedListPresenterToViewProtocol {
     func showLoading()
@@ -22,6 +20,7 @@ protocol FeedListViewToPresenterProtocol {
 // MARK: Presenter <-> Interactor Protocols
 protocol FeedListPresenterToInteractorProtocol {
     func loadFeed()
+    func tempFuncForRouter() -> [FeedVM]
 }
 
 protocol FeedListInteractorToPresenterProtocol {
@@ -31,4 +30,8 @@ protocol FeedListInteractorToPresenterProtocol {
 // MARK: Presenter <-> Router Protocols
 protocol FeedListPresenterToRouterProtocol {
     func openDetails(item: FeedVM)
+}
+
+protocol FeedsDataSource {
+    func getFeeds()
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class LoadFakeData {
+final class FakeFeedDataSource {
     func loadFakeData() -> [FeedVM] {
         let testFeed: [FeedVM] = [FeedVM(imageUrl: "https://www.w3schools.com/w3css/img_lights.jpg", imagePlaceholderName: "String1", title: "Feed 1", details: "Feed detail 1"),
                                   FeedVM(imageUrl: "https://www.w3schools.com/w3css/img_forest.jpg", imagePlaceholderName: "String2", title: "Feed 2", details: "Feed detail 2"),

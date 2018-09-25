@@ -9,17 +9,27 @@
 import UIKit
 import Kingfisher
 
-class FeedCustomTableViewCell: UITableViewCell {
+protocol Configurable {
+    associatedtype Config
+    func configure(config: Config)
+}
+
+final class FeedCustomTableViewCell: UITableViewCell, Configurable {
+
+    typealias Config = FeedVM
 
     @IBOutlet weak var feedImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
 
-    func set(forPost post: FeedVM) {
+    func configure(config: FeedVM) {
         self.selectionStyle = .none
-        titleLabel.text = post.title
-        detailLabel.text = post.details
-        let url = URL(string: post.imageUrl)
+        titleLabel.text = config.title
+        detailLabel.text = config.details
+        let url = URL(string: config.imageUrl)
         feedImageView.kf.setImage(with: url)
     }
+//    func set(forPost post: FeedVM) {
+//
+//    }
 }

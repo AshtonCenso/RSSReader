@@ -8,28 +8,28 @@
 
 import UIKit
 
-class FeedListViewController: UIViewController, FeedListPresenterToViewProtocol, Injectable {
+final class FeedListViewController: UIViewController, FeedListPresenterToViewProtocol, Injectable {
 
     @IBOutlet var postListTableView: UITableView!
-    var presenter: FeedListPresenter?
-    var tableViewCustom: TableViewManager?
+    private var presenter: FeedListPresenter!
+    private var tableViewManager: TableViewManager!
 
     struct Dependencies {
-        var presenter: FeedListPresenter?
-        var tableViewCustom: TableViewManager?
+        let presenter: FeedListPresenter
+        let tableViewCustom: TableViewManager
     }
-    
+
     func inject(dependencies: FeedListViewController.Dependencies) {
         presenter = dependencies.presenter
-        tableViewCustom = dependencies.tableViewCustom
+        tableViewManager = dependencies.tableViewCustom
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        postListTableView.delegate = tableViewCustom
-        postListTableView.dataSource = tableViewCustom
-        tableViewCustom?.didSelectRow = didSelectRow
-        presenter?.onViewLoaded()
+        postListTableView.delegate = tableViewManager
+        postListTableView.dataSource = tableViewManager
+        tableViewManager.didSelectRow = didSelectRow
+        presenter.onViewLoaded()
     }
 
     // MARK: FeedListViewProtocol
@@ -47,6 +47,6 @@ class FeedListViewController: UIViewController, FeedListPresenterToViewProtocol,
     }
 
     func didSelectRow(dataItem: FeedVM) {
-        presenter?.openDetails(item: dataItem)
+        presenter.openDetails(item: dataItem)
     }
 }

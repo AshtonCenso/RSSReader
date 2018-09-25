@@ -9,16 +9,25 @@
 import Foundation
 
 
-final class FeedListInteractor: FeedListPresenterToInteractorProtocol {
+final class FeedListInteractor: FeedListPresenterToInteractorProtocol, Injectable {
+
     var presenter: FeedListInteractorToPresenterProtocol?
 
+    struct Dependencies {
+        let presenter: FeedListInteractorToPresenterProtocol
+    }
+
+    func inject(dependencies: FeedListInteractor.Dependencies) {
+        presenter = dependencies.presenter
+    }
+
     func loadFeed() {
-        let fakeService: LoadFakeData = LoadFakeData()
+        let fakeService: FakeFeedDataSource = FakeFeedDataSource()
         presenter?.loadedFeeds(feeds: fakeService.loadFakeData())
     }
 
     func tempFuncForRouter() -> [FeedVM] {
-        let fakeService: LoadFakeData = LoadFakeData()
+        let fakeService: FakeFeedDataSource = FakeFeedDataSource()
         return fakeService.loadFakeData()
     }
 

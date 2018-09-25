@@ -21,17 +21,19 @@ final class TableViewManager: NSObject, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! FeedCustomTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as? FeedCustomTableViewCell
+            else {
+                fatalError("Cell doesn't exist")
+        }
         cell.selectionStyle = .none
-        cell.set(forPost: data[indexPath.row])
+        cell.configure(config: data[indexPath.row])
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dataItem = data[indexPath.row]
-        if let didSelectRow = didSelectRow {
-            didSelectRow(dataItem)
-        }
+        didSelectRow?(dataItem)
+
     }
 }
