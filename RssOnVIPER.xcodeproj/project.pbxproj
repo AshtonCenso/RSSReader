@@ -199,6 +199,7 @@
 				3037DE3D2146BDF2000EC204 /* Frameworks */,
 				3037DE3E2146BDF2000EC204 /* Resources */,
 				3065536A2151791300BD4CCF /* ShellScript */,
+				257115548DF1314905537A81 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +257,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		257115548DF1314905537A81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3065536A2151791300BD4CCF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
