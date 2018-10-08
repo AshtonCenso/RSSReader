@@ -8,7 +8,7 @@
 
 final class FeedListPresenter: FeedListInteractorToPresenterProtocol, FeedListPresenterToRouterProtocol, Injectable {
 
-    private var view: FeedListPresenterToViewProtocol?
+    private weak var view: FeedListPresenterToViewProtocol?
     private var router: FeedListPresenterToRouterProtocol?
     private var loadFeedInteractor: FeedListPresenterToInteractorProtocol?
 

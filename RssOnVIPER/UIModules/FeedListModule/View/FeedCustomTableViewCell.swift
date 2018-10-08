@@ -29,7 +29,4 @@ final class FeedCustomTableViewCell: UITableViewCell, Configurable {
         let url = URL(string: config.imageUrl)
         feedImageView.kf.setImage(with: url)
     }
-//    func set(forPost post: FeedVM) {
-//
-//    }
 }
