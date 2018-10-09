@@ -16,7 +16,7 @@
 		3037DE5B2146C720000EC204 /* FeedListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE5A2146C720000EC204 /* FeedListPresenter.swift */; };
 		3037DE5D2146C730000EC204 /* FeedListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE5C2146C730000EC204 /* FeedListRouter.swift */; };
 		3037DE5F2146C74C000EC204 /* FeedListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE5E2146C74C000EC204 /* FeedListEntity.swift */; };
-		3039197D2155141D00DF1816 /* FakeFeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039197C2155141D00DF1816 /* FakeFeedDataSource.swift */; };
+		3039197D2155141D00DF1816 /* FeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039197C2155141D00DF1816 /* FeedDataSource.swift */; };
 		306553692151362100BD4CCF /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306553682151362100BD4CCF /* TableViewManager.swift */; };
 		30BC901C2147DD6800EAE5F4 /* FeedListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */; };
 		30D5D6912153CAAB00FBEEA9 /* FeedCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5D6902153CAAB00FBEEA9 /* FeedCustomTableViewCell.swift */; };
@@ -36,7 +36,7 @@
 		3037DE5A2146C720000EC204 /* FeedListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListPresenter.swift; sourceTree = "<group>"; };
 		3037DE5C2146C730000EC204 /* FeedListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListRouter.swift; sourceTree = "<group>"; };
 		3037DE5E2146C74C000EC204 /* FeedListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListEntity.swift; sourceTree = "<group>"; };
-		3039197C2155141D00DF1816 /* FakeFeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFeedDataSource.swift; sourceTree = "<group>"; };
+		3039197C2155141D00DF1816 /* FeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataSource.swift; sourceTree = "<group>"; };
 		306553682151362100BD4CCF /* TableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
 		30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewProtocol.swift; sourceTree = "<group>"; };
 		30D5D6902153CAAB00FBEEA9 /* FeedCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				3037DE5E2146C74C000EC204 /* FeedListEntity.swift */,
-				3039197C2155141D00DF1816 /* FakeFeedDataSource.swift */,
+				3039197C2155141D00DF1816 /* FeedDataSource.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -319,7 +319,7 @@
 				3037DE592146C713000EC204 /* FeedListInteractor.swift in Sources */,
 				3037DE5B2146C720000EC204 /* FeedListPresenter.swift in Sources */,
 				3037DE442146BDF2000EC204 /* AppDelegate.swift in Sources */,
-				3039197D2155141D00DF1816 /* FakeFeedDataSource.swift in Sources */,
+				3039197D2155141D00DF1816 /* FeedDataSource.swift in Sources */,
 				3037DE5F2146C74C000EC204 /* FeedListEntity.swift in Sources */,
 				30E7C2602152B6F300B53F71 /* Injectable.swift in Sources */,
 				30D5D6912153CAAB00FBEEA9 /* FeedCustomTableViewCell.swift in Sources */,

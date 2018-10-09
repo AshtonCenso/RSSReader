@@ -32,9 +32,9 @@ protocol FeedListPresenterToRouterProtocol {
     func openDetails(item: FeedVM)
 }
 
-protocol FeedDataSource {
+protocol FetchFeedDataSource {
     func getFeeds(result: Result<[FeedVM]>)
-    func fakeFeedDataSource()
+    func receivedFeeds() -> [FeedVM]
 }
 
 enum Result<Value> {

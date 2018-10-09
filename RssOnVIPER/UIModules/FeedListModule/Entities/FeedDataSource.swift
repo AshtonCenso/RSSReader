@@ -1,5 +1,5 @@
 //
-//  FakeFeedDataSource.swift
+//  FeedDataSource.swift
 //  RssOnVIPER
 //
 //  Created by Anton Tsykanov on 21.09.2018.
@@ -8,22 +8,7 @@
 
 import Foundation
 
-final class FakeFeedDataSource: FeedDataSource {
-    
-    func getFeeds(result: Result<[FeedVM]>) {
-        switch result {
-        case .success(let posts):
-            print(posts) 
-
-        case .failure:
-            print("error")
-        }
-    }
-
-    func fakeFeedDataSource() {
-        
-    }
-
+final class FeedDataSource: FetchFeedDataSource {
 
     func loadFakeData() -> [FeedVM] {
         let testFeed: [FeedVM] = [FeedVM(imageUrl: "https://www.w3schools.com/w3css/img_lights.jpg",
@@ -42,7 +27,22 @@ final class FakeFeedDataSource: FeedDataSource {
                                          imagePlaceholderName: "String7", title: "Feed 7", details: "Feed detail 7"),
                                   FeedVM(imageUrl: "https://www.w3schools.com/w3images/streetart2.jpg",
                                          imagePlaceholderName: "String8", title: "Feed 8", details: "Feed detail 8")]
-        
+
         return testFeed
     }
+
+    func receivedFeeds() -> [FeedVM] {
+        return loadFakeData()
+    }
+
+    func getFeeds(result: Result<[FeedVM]>) {
+        switch result {
+        case .success(let posts):
+            print(posts)
+
+        case .failure:
+            print("error")
+        }
+    }
+
 }
