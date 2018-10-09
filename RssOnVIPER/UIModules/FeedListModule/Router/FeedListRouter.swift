@@ -18,12 +18,12 @@ final class FeedListRouter: FeedListPresenterToRouterProtocol {
         }
         let presenter: FeedListPresenter = FeedListPresenter()
         let interactor: FeedListInteractor = FeedListInteractor()
-        let feedService: FeedDataSource = FeedDataSource()
+        let feedService: FeedDataSource = FakeFeedDataSource()
         let router = self
 
         interactor.inject(dependencies: FeedListInteractor.Dependencies(presenter: presenter, feedService: feedService))
         viewController.inject(dependencies: FeedListViewController.Dependencies(
-                             presenter: presenter, tableViewCustom: TableViewManager(data: interactor.tempFuncForRouter())))
+                             presenter: presenter, tableViewCustom: TableViewManager()))
         presenter.inject(dependencies: FeedListPresenter.Dependencies(view: viewController, router: router, loadFeedInteractor: interactor))
 
         return viewController

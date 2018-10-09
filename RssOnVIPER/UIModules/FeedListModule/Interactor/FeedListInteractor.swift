@@ -10,14 +10,12 @@ import Foundation
 
 
 final class FeedListInteractor: FeedListPresenterToInteractorProtocol, Injectable {
-
     private var presenter: FeedListInteractorToPresenterProtocol?
     private var feedService: FeedDataSource?
 
     struct Dependencies {
         let presenter: FeedListInteractorToPresenterProtocol
         let feedService: FeedDataSource
-
     }
 
     func inject(dependencies: FeedListInteractor.Dependencies) {
@@ -25,11 +23,7 @@ final class FeedListInteractor: FeedListPresenterToInteractorProtocol, Injectabl
         feedService = dependencies.feedService
     }
 
-    func loadFeed() {
-        presenter?.loadedFeeds(feeds: (feedService?.receivedFeeds())!)
-    }
-
-    func tempFuncForRouter() -> [FeedVM] {
-        return (feedService?.receivedFeeds())!
+    func getFeeds(completion: (Result<[FeedVM]>) -> Void) {
+        feedService?.getFeeds(completion: completion)
     }
 }

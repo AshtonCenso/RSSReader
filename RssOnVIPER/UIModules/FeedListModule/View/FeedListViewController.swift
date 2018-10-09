@@ -26,9 +26,11 @@ final class FeedListViewController: UIViewController, FeedListPresenterToViewPro
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         postListTableView.delegate = tableViewManager
         postListTableView.dataSource = tableViewManager
         tableViewManager.didSelectRow = didSelectRow
+
         presenter.onViewLoaded()
     }
 
@@ -38,11 +40,12 @@ final class FeedListViewController: UIViewController, FeedListPresenterToViewPro
     }
 
     func hideLoading() {
-        print("hideLoading FeedListViewController")
+        print(#function)
     }
 
     func showData(data: [FeedVM]) {
-        print("showData FeedListViewController")
+        tableViewManager.data = data
+
         postListTableView.reloadData()
     }
 

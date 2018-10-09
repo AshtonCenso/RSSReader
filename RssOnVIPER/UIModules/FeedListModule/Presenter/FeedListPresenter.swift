@@ -10,7 +10,7 @@ final class FeedListPresenter: FeedListInteractorToPresenterProtocol, FeedListPr
 
     private weak var view: FeedListPresenterToViewProtocol?
     private var router: FeedListPresenterToRouterProtocol?
-    private var loadFeedInteractor: FeedListPresenterToInteractorProtocol?
+    private var interactor: FeedListPresenterToInteractorProtocol?
 
     struct Dependencies {
         let view: FeedListPresenterToViewProtocol
@@ -21,19 +21,21 @@ final class FeedListPresenter: FeedListInteractorToPresenterProtocol, FeedListPr
     func inject(dependencies: FeedListPresenter.Dependencies) {
         view = dependencies.view
         router = dependencies.router
-        loadFeedInteractor = dependencies.loadFeedInteractor
+        interactor = dependencies.loadFeedInteractor
     }
 
     private var feed: [FeedVM] = []
 
     func onViewLoaded() {
         view?.showLoading()
-        loadFeedInteractor?.loadFeed()
-    }
 
-    func loadedFeeds(feeds: [FeedVM]) {
-        view?.hideLoading()
-        view?.showData(data: feeds)
+        interactor?.getFeeds { (result) in
+            result.onSuccess {
+                view?.hideLoading()
+                view?.showData(data: $0)
+            }
+        }
+
     }
 
     func openDetails(item: FeedVM) {

@@ -14,10 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//         Override point for customization after application launch.
+
         let tabBarController = UITabBarController()
-        let feedList = FeedListRouter().prepareModule()
-        let tabBarControllerList = [feedList]
+        let feedListView = FeedListRouter().prepareModule()
+        let tabBarControllerList = [feedListView]
         tabBarController.viewControllers = tabBarControllerList
 
         window = UIWindow(frame: UIScreen.main.bounds)

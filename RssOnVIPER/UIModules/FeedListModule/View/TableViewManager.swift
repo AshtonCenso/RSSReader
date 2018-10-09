@@ -9,12 +9,8 @@
 import UIKit
 
 final class TableViewManager: NSObject, UITableViewDelegate, UITableViewDataSource {
-    private var data: [FeedVM]
+    var data: [FeedVM] = []
     var didSelectRow: ((_ dataItem: FeedVM) -> Void)?
-
-    init(data: [FeedVM]) {
-        self.data = data
-    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
@@ -33,7 +29,7 @@ final class TableViewManager: NSObject, UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dataItem = data[indexPath.row]
-        didSelectRow?(dataItem)
 
+        didSelectRow?(dataItem)
     }
 }
