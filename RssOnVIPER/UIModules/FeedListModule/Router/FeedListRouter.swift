@@ -9,22 +9,21 @@
 import UIKit
 
 final class FeedListRouter: FeedListPresenterToRouterProtocol {
-
      func prepareModule() -> UIViewController {
-        guard let viewController =
-            UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "FeedListVC") as? FeedListViewController
-            else {
-                return UIViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "FeedListVC") as? FeedListViewController else {
+                fatalError("Can't load view controller")
         }
+        
         let presenter: FeedListPresenter = FeedListPresenter()
         let interactor: FeedListInteractor = FeedListInteractor()
         let feedService: FeedDataSource = FakeFeedDataSource()
-        let router = self
 
         interactor.inject(dependencies: FeedListInteractor.Dependencies(presenter: presenter, feedService: feedService))
         viewController.inject(dependencies: FeedListViewController.Dependencies(
                              presenter: presenter, tableViewCustom: TableViewManager()))
-        presenter.inject(dependencies: FeedListPresenter.Dependencies(view: viewController, router: router, loadFeedInteractor: interactor))
+        presenter.inject(dependencies: FeedListPresenter.Dependencies(view: viewController, router: self, loadFeedInteractor: interactor))
 
         return viewController
     }

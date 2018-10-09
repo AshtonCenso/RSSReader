@@ -21,6 +21,7 @@ final class TableViewManager: NSObject, UITableViewDelegate, UITableViewDataSour
             else {
                 fatalError("Cell doesn't exist")
         }
+        
         cell.selectionStyle = .none
         cell.configure(config: data[indexPath.row])
 

@@ -9,20 +9,10 @@
 import UIKit
 
 final class FeedListViewController: UIViewController, FeedListPresenterToViewProtocol, Injectable {
-
     @IBOutlet var postListTableView: UITableView!
+    \
     private var presenter: FeedListPresenter!
     private var tableViewManager: TableViewManager!
-
-    struct Dependencies {
-        let presenter: FeedListPresenter
-        let tableViewCustom: TableViewManager
-    }
-
-    func inject(dependencies: FeedListViewController.Dependencies) {
-        presenter = dependencies.presenter
-        tableViewManager = dependencies.tableViewCustom
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,23 +23,44 @@ final class FeedListViewController: UIViewController, FeedListPresenterToViewPro
 
         presenter.onViewLoaded()
     }
+}
 
-    // MARK: FeedListViewProtocol
+// MARK: - Actions
+
+extension FeedListViewController {
+    func didSelectRow(dataItem: FeedVM) {
+        presenter.openDetails(item: dataItem)
+    }
+}
+
+// MARK: - Injectable
+
+extension FeedListViewController {
+    struct Dependencies {
+        let presenter: FeedListPresenter
+        let tableViewCustom: TableViewManager
+    }
+    
+    func inject(dependencies: FeedListViewController.Dependencies) {
+        presenter = dependencies.presenter
+        tableViewManager = dependencies.tableViewCustom
+    }
+}
+
+// MARK: - FeedListPresenterToViewProtocol
+
+extension FeedListViewController {
     func showLoading() {
         print(#function)
     }
-
+    
     func hideLoading() {
         print(#function)
     }
-
+    
     func showData(data: [FeedVM]) {
         tableViewManager.data = data
-
+        
         postListTableView.reloadData()
-    }
-
-    func didSelectRow(dataItem: FeedVM) {
-        presenter.openDetails(item: dataItem)
     }
 }

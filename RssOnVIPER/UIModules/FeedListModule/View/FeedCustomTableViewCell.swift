@@ -9,10 +9,6 @@
 import UIKit
 import Kingfisher
 
-protocol Configurable {
-    associatedtype Config
-    func configure(config: Config)
-}
 
 final class FeedCustomTableViewCell: UITableViewCell, Configurable {
 

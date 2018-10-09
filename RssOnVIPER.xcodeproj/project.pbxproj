@@ -23,6 +23,7 @@
 		5E07BC2F216CDD55000E4558 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07BC2E216CDD55000E4558 /* Result.swift */; };
 		5E07BC33216CDE64000E4558 /* FeedDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07BC32216CDE64000E4558 /* FeedDataSourceProtocol.swift */; };
 		5E07BC35216CDE7B000E4558 /* FakeFeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07BC34216CDE7B000E4558 /* FakeFeedDataSource.swift */; };
+		5E07BC39216CE2B6000E4558 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07BC38216CE2B6000E4558 /* Configurable.swift */; };
 		7B757966BFAB9122BFDE0F3C /* Pods_RssOnVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87C6AB0E9E057D559994951 /* Pods_RssOnVIPER.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		5E07BC2E216CDD55000E4558 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		5E07BC32216CDE64000E4558 /* FeedDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataSourceProtocol.swift; sourceTree = "<group>"; };
 		5E07BC34216CDE7B000E4558 /* FakeFeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFeedDataSource.swift; sourceTree = "<group>"; };
+		5E07BC38216CE2B6000E4558 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		7AE48E5B77205B9E27236FF0 /* Pods-RssOnVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssOnVIPER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER.debug.xcconfig"; sourceTree = "<group>"; };
 		BE61EFF3445EB9605AEA717D /* Pods-RssOnVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssOnVIPER.release.xcconfig"; path = "Pods/Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER.release.xcconfig"; sourceTree = "<group>"; };
 		E87C6AB0E9E057D559994951 /* Pods_RssOnVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RssOnVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				3037DE432146BDF2000EC204 /* AppDelegate.swift */,
 				30E7C25F2152B6F300B53F71 /* Injectable.swift */,
 				5E07BC2E216CDD55000E4558 /* Result.swift */,
+				5E07BC38216CE2B6000E4558 /* Configurable.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				5E07BC2F216CDD55000E4558 /* Result.swift in Sources */,
 				3037DE5F2146C74C000EC204 /* FeedListEntity.swift in Sources */,
 				30E7C2602152B6F300B53F71 /* Injectable.swift in Sources */,
+				5E07BC39216CE2B6000E4558 /* Configurable.swift in Sources */,
 				30D5D6912153CAAB00FBEEA9 /* FeedCustomTableViewCell.swift in Sources */,
 				5E07BC33216CDE64000E4558 /* FeedDataSourceProtocol.swift in Sources */,
 				306553692151362100BD4CCF /* TableViewManager.swift in Sources */,
