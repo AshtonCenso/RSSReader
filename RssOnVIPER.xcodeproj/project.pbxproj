@@ -18,6 +18,7 @@
 		3037DE5F2146C74C000EC204 /* FeedListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE5E2146C74C000EC204 /* FeedListEntity.swift */; };
 		306553692151362100BD4CCF /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306553682151362100BD4CCF /* TableViewManager.swift */; };
 		30BC901C2147DD6800EAE5F4 /* FeedListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */; };
+		30D19C59216D2D0F0002BC90 /* RSSLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D19C58216D2D0F0002BC90 /* RSSLoader.swift */; };
 		30D5D6912153CAAB00FBEEA9 /* FeedCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5D6902153CAAB00FBEEA9 /* FeedCustomTableViewCell.swift */; };
 		30E7C2602152B6F300B53F71 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7C25F2152B6F300B53F71 /* Injectable.swift */; };
 		5E07BC2F216CDD55000E4558 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07BC2E216CDD55000E4558 /* Result.swift */; };
@@ -41,6 +42,7 @@
 		3037DE5E2146C74C000EC204 /* FeedListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListEntity.swift; sourceTree = "<group>"; };
 		306553682151362100BD4CCF /* TableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
 		30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewProtocol.swift; sourceTree = "<group>"; };
+		30D19C58216D2D0F0002BC90 /* RSSLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSLoader.swift; sourceTree = "<group>"; };
 		30D5D6902153CAAB00FBEEA9 /* FeedCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCustomTableViewCell.swift; sourceTree = "<group>"; };
 		30E7C25F2152B6F300B53F71 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		5E07BC2E216CDD55000E4558 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -178,6 +180,14 @@
 			path = FeedListModule;
 			sourceTree = "<group>";
 		};
+		30D19C57216D2AD30002BC90 /* RSSLoader */ = {
+			isa = PBXGroup;
+			children = (
+				30D19C58216D2D0F0002BC90 /* RSSLoader.swift */,
+			);
+			path = RSSLoader;
+			sourceTree = "<group>";
+		};
 		59763155CEB04DF58E96BF1D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +200,7 @@
 		5E07BC30216CDE49000E4558 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				30D19C57216D2AD30002BC90 /* RSSLoader */,
 				5E07BC31216CDE59000E4558 /* FeedDataSource */,
 			);
 			path = Services;
@@ -289,10 +300,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireRSSParser/AlamofireRSSParser.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireRSSParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +355,7 @@
 			files = (
 				3037DE5D2146C730000EC204 /* FeedListRouter.swift in Sources */,
 				5E07BC35216CDE7B000E4558 /* FakeFeedDataSource.swift in Sources */,
+				30D19C59216D2D0F0002BC90 /* RSSLoader.swift in Sources */,
 				30BC901C2147DD6800EAE5F4 /* FeedListViewProtocol.swift in Sources */,
 				3037DE572146C122000EC204 /* FeedListViewController.swift in Sources */,
 				3037DE592146C713000EC204 /* FeedListInteractor.swift in Sources */,

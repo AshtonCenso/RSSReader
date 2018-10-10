@@ -1,16 +1,25 @@
 PODS:
+  - Alamofire (4.7.3)
+  - AlamofireRSSParser (2.1.0):
+    - Alamofire
   - Kingfisher (4.8.1)
 
 DEPENDENCIES:
+  - Alamofire
+  - AlamofireRSSParser
   - Kingfisher (~> 4.8.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireRSSParser
     - Kingfisher
 
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireRSSParser: 5fed94de51ff88ea48496d7dfa6e3274100d90d6
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
 
-PODFILE CHECKSUM: 1876656410a4033c82c8c89060bf05ddea139e94
+PODFILE CHECKSUM: 196809f1bb1a21e23e320a347aeabb58a025e73e
 
 COCOAPODS: 1.5.3

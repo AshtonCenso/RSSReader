@@ -7,6 +7,8 @@ target 'RssOnVIPER' do
   use_frameworks!
   
   pod 'Kingfisher', '~> 4.8.1'
+  pod 'Alamofire'
+  pod 'AlamofireRSSParser'
 
   # Pods for RssOnVIPER
 

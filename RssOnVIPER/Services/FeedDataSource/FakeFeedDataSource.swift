@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 final class FakeFeedDataSource: FeedDataSource {
     func getFeeds(completion: (Result<[FeedVM]>) -> Void) {
         completion(.success([FeedVM(imageUrl: "https://www.w3schools.com/w3css/img_lights.jpg",

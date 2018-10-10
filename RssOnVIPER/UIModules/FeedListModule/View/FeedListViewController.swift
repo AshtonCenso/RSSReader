@@ -10,13 +10,12 @@ import UIKit
 
 final class FeedListViewController: UIViewController, FeedListPresenterToViewProtocol, Injectable {
     @IBOutlet var postListTableView: UITableView!
-    \
+
     private var presenter: FeedListPresenter!
     private var tableViewManager: TableViewManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         postListTableView.delegate = tableViewManager
         postListTableView.dataSource = tableViewManager
         tableViewManager.didSelectRow = didSelectRow
@@ -40,7 +39,7 @@ extension FeedListViewController {
         let presenter: FeedListPresenter
         let tableViewCustom: TableViewManager
     }
-    
+
     func inject(dependencies: FeedListViewController.Dependencies) {
         presenter = dependencies.presenter
         tableViewManager = dependencies.tableViewCustom
@@ -53,14 +52,14 @@ extension FeedListViewController {
     func showLoading() {
         print(#function)
     }
-    
+
     func hideLoading() {
         print(#function)
     }
-    
+
     func showData(data: [FeedVM]) {
         tableViewManager.data = data
-        
+
         postListTableView.reloadData()
     }
 }

@@ -21,7 +21,7 @@ extension FeedListInteractor {
         let presenter: FeedListInteractorToPresenterProtocol
         let feedService: FeedDataSource
     }
-    
+
     func inject(dependencies: FeedListInteractor.Dependencies) {
         presenter = dependencies.presenter
         feedService = dependencies.feedService
