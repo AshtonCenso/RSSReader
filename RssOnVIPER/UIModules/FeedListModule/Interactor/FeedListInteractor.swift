@@ -8,8 +8,30 @@
 
 import Foundation
 
-class FeedListInteractor: FeedListInteractorProtocol {
-    func loadFeed() -> [FeedVM] {
-        return Array()
+
+final class FeedListInteractor: FeedListPresenterToInteractorProtocol, Injectable {
+    private var presenter: FeedListInteractorToPresenterProtocol?
+    private var feedService: FeedDataSource?
+}
+
+// MARK: - Injectable
+
+extension FeedListInteractor {
+    struct Dependencies {
+        let presenter: FeedListInteractorToPresenterProtocol
+        let feedService: FeedDataSource
+    }
+    
+    func inject(dependencies: FeedListInteractor.Dependencies) {
+        presenter = dependencies.presenter
+        feedService = dependencies.feedService
+    }
+}
+
+// MARK: - FeedListPresenterToInteractorProtocol
+
+extension FeedListInteractor {
+    func getFeeds(completion: (Result<[FeedVM]>) -> Void) {
+        feedService?.getFeeds(completion: completion)
     }
 }

@@ -6,18 +6,27 @@
 //  Copyright © 2018 Anton Tsykanov. All rights reserved.
 //
 
-import UIKit
-
-protocol FeedListViewProtocol: class {
+// MARK: View <-> Presenter Protocols
+protocol FeedListPresenterToViewProtocol: class where Self: FeedListViewController {
     func showLoading()
     func hideLoading()
     func showData(data: [FeedVM])
 }
 
-protocol FeedListInteractorProtocol {
-    func loadFeed() -> [FeedVM]
+protocol FeedListViewToPresenterProtocol {
+    func openFeedDetail() -> FeedVM
 }
 
-protocol FeedListRouterProtocol {
+// MARK: Presenter <-> Interactor Protocols
+protocol FeedListPresenterToInteractorProtocol {
+    func getFeeds(completion: (Result<[FeedVM]>) -> Void)
+}
+
+protocol FeedListInteractorToPresenterProtocol {
+}
+
+// MARK: Presenter <-> Router Protocols
+protocol FeedListPresenterToRouterProtocol {
     func openDetails(item: FeedVM)
 }
+

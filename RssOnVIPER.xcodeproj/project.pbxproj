@@ -18,6 +18,12 @@
 		3037DE5F2146C74C000EC204 /* FeedListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037DE5E2146C74C000EC204 /* FeedListEntity.swift */; };
 		306553692151362100BD4CCF /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306553682151362100BD4CCF /* TableViewManager.swift */; };
 		30BC901C2147DD6800EAE5F4 /* FeedListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */; };
+		30D5D6912153CAAB00FBEEA9 /* FeedCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5D6902153CAAB00FBEEA9 /* FeedCustomTableViewCell.swift */; };
+		30E7C2602152B6F300B53F71 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7C25F2152B6F300B53F71 /* Injectable.swift */; };
+		5E07BC2F216CDD55000E4558 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07BC2E216CDD55000E4558 /* Result.swift */; };
+		5E07BC33216CDE64000E4558 /* FeedDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07BC32216CDE64000E4558 /* FeedDataSourceProtocol.swift */; };
+		5E07BC35216CDE7B000E4558 /* FakeFeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07BC34216CDE7B000E4558 /* FakeFeedDataSource.swift */; };
+		5E07BC39216CE2B6000E4558 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07BC38216CE2B6000E4558 /* Configurable.swift */; };
 		7B757966BFAB9122BFDE0F3C /* Pods_RssOnVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87C6AB0E9E057D559994951 /* Pods_RssOnVIPER.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +41,12 @@
 		3037DE5E2146C74C000EC204 /* FeedListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListEntity.swift; sourceTree = "<group>"; };
 		306553682151362100BD4CCF /* TableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
 		30BC901B2147DD6800EAE5F4 /* FeedListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewProtocol.swift; sourceTree = "<group>"; };
+		30D5D6902153CAAB00FBEEA9 /* FeedCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCustomTableViewCell.swift; sourceTree = "<group>"; };
+		30E7C25F2152B6F300B53F71 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		5E07BC2E216CDD55000E4558 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		5E07BC32216CDE64000E4558 /* FeedDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataSourceProtocol.swift; sourceTree = "<group>"; };
+		5E07BC34216CDE7B000E4558 /* FakeFeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFeedDataSource.swift; sourceTree = "<group>"; };
+		5E07BC38216CE2B6000E4558 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		7AE48E5B77205B9E27236FF0 /* Pods-RssOnVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssOnVIPER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER.debug.xcconfig"; sourceTree = "<group>"; };
 		BE61EFF3445EB9605AEA717D /* Pods-RssOnVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssOnVIPER.release.xcconfig"; path = "Pods/Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER.release.xcconfig"; sourceTree = "<group>"; };
 		E87C6AB0E9E057D559994951 /* Pods_RssOnVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RssOnVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				3037DE562146C122000EC204 /* FeedListViewController.swift */,
+				30D5D6902153CAAB00FBEEA9 /* FeedCustomTableViewCell.swift */,
+				306553682151362100BD4CCF /* TableViewManager.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,6 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				3037DE432146BDF2000EC204 /* AppDelegate.swift */,
+				30E7C25F2152B6F300B53F71 /* Injectable.swift */,
+				5E07BC2E216CDD55000E4558 /* Result.swift */,
+				5E07BC38216CE2B6000E4558 /* Configurable.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -137,6 +154,7 @@
 		3037DE422146BDF2000EC204 /* RssOnVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				5E07BC30216CDE49000E4558 /* Services */,
 				30007A4D214BC59F00F76037 /* AppDelegate */,
 				30007A4E214BC5CC00F76037 /* UIModules */,
 				3037DE472146BDF2000EC204 /* Main.storyboard */,
@@ -156,7 +174,6 @@
 				30007A44214BBF9700F76037 /* Router */,
 				30007A45214BC02100F76037 /* Entities */,
 				30007A46214BC02800F76037 /* Protocol */,
-				306553682151362100BD4CCF /* TableViewManager.swift */,
 			);
 			path = FeedListModule;
 			sourceTree = "<group>";
@@ -168,6 +185,23 @@
 				BE61EFF3445EB9605AEA717D /* Pods-RssOnVIPER.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5E07BC30216CDE49000E4558 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5E07BC31216CDE59000E4558 /* FeedDataSource */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5E07BC31216CDE59000E4558 /* FeedDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				5E07BC32216CDE64000E4558 /* FeedDataSourceProtocol.swift */,
+				5E07BC34216CDE7B000E4558 /* FakeFeedDataSource.swift */,
+			);
+			path = FeedDataSource;
 			sourceTree = "<group>";
 		};
 		A35E3A88DFE0EA2D179891E1 /* Frameworks */ = {
@@ -190,6 +224,7 @@
 				3037DE3D2146BDF2000EC204 /* Frameworks */,
 				3037DE3E2146BDF2000EC204 /* Resources */,
 				3065536A2151791300BD4CCF /* ShellScript */,
+				257115548DF1314905537A81 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +282,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		257115548DF1314905537A81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RssOnVIPER/Pods-RssOnVIPER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3065536A2151791300BD4CCF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,12 +339,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3037DE5D2146C730000EC204 /* FeedListRouter.swift in Sources */,
+				5E07BC35216CDE7B000E4558 /* FakeFeedDataSource.swift in Sources */,
 				30BC901C2147DD6800EAE5F4 /* FeedListViewProtocol.swift in Sources */,
 				3037DE572146C122000EC204 /* FeedListViewController.swift in Sources */,
 				3037DE592146C713000EC204 /* FeedListInteractor.swift in Sources */,
 				3037DE5B2146C720000EC204 /* FeedListPresenter.swift in Sources */,
 				3037DE442146BDF2000EC204 /* AppDelegate.swift in Sources */,
+				5E07BC2F216CDD55000E4558 /* Result.swift in Sources */,
 				3037DE5F2146C74C000EC204 /* FeedListEntity.swift in Sources */,
+				30E7C2602152B6F300B53F71 /* Injectable.swift in Sources */,
+				5E07BC39216CE2B6000E4558 /* Configurable.swift in Sources */,
+				30D5D6912153CAAB00FBEEA9 /* FeedCustomTableViewCell.swift in Sources */,
+				5E07BC33216CDE64000E4558 /* FeedDataSourceProtocol.swift in Sources */,
 				306553692151362100BD4CCF /* TableViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

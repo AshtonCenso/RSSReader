@@ -8,40 +8,59 @@
 
 import UIKit
 
-class FeedListViewController: UIViewController, FeedListViewProtocol, FeedListRouterProtocol {
-    
-//    lazy var presenter: FeedListPresenter = FeedListPresenter(withView: self, withRouter: self)
+final class FeedListViewController: UIViewController, FeedListPresenterToViewProtocol, Injectable {
     @IBOutlet var postListTableView: UITableView!
-    var tableViewCustom: TableViewManager = TableViewManager(data: [])
-    var presenter: FeedListPresenter?
-    
+    \
+    private var presenter: FeedListPresenter!
+    private var tableViewManager: TableViewManager!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        postListTableView.delegate = tableViewCustom
-        postListTableView.dataSource = tableViewCustom
-        
-        presenter?.onViewLoaded()
+
+        postListTableView.delegate = tableViewManager
+        postListTableView.dataSource = tableViewManager
+        tableViewManager.didSelectRow = didSelectRow
+
+        presenter.onViewLoaded()
+    }
+}
+
+// MARK: - Actions
+
+extension FeedListViewController {
+    func didSelectRow(dataItem: FeedVM) {
+        presenter.openDetails(item: dataItem)
+    }
+}
+
+// MARK: - Injectable
+
+extension FeedListViewController {
+    struct Dependencies {
+        let presenter: FeedListPresenter
+        let tableViewCustom: TableViewManager
     }
     
-    // MARK: FeedListViewProtocol
+    func inject(dependencies: FeedListViewController.Dependencies) {
+        presenter = dependencies.presenter
+        tableViewManager = dependencies.tableViewCustom
+    }
+}
+
+// MARK: - FeedListPresenterToViewProtocol
+
+extension FeedListViewController {
     func showLoading() {
         print(#function)
     }
     
     func hideLoading() {
-        print("hideLoading FeedListViewController")
+        print(#function)
     }
     
     func showData(data: [FeedVM]) {
-        print("showData FeedListViewController")
-        let data2 = [1, 2, 3, 4] //only for test custom TableView class
-        tableViewCustom = TableViewManager(data: data2)
+        tableViewManager.data = data
+        
         postListTableView.reloadData()
-    }
-    
-    // MARK: FeedListRouterProtocol
-    func openDetails(item: FeedVM) {
-        print("OpenDetails FeedListViewController")
     }
 }

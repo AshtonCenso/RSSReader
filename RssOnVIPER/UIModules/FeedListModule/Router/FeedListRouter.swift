@@ -8,37 +8,27 @@
 
 import UIKit
 
-class FeedListRouter {
+final class FeedListRouter: FeedListPresenterToRouterProtocol {
+     func prepareModule() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "FeedListVC") as? FeedListViewController else {
+                fatalError("Can't load view controller")
+        }
+        
+        let presenter: FeedListPresenter = FeedListPresenter()
+        let interactor: FeedListInteractor = FeedListInteractor()
+        let feedService: FeedDataSource = FakeFeedDataSource()
 
-    class func prepareModule() -> UIViewController {
-        let view = FeedListViewController()
-        let presenter = FeedListPresenter(withView: view, withRouter: view)
+        interactor.inject(dependencies: FeedListInteractor.Dependencies(presenter: presenter, feedService: feedService))
+        viewController.inject(dependencies: FeedListViewController.Dependencies(
+                             presenter: presenter, tableViewCustom: TableViewManager()))
+        presenter.inject(dependencies: FeedListPresenter.Dependencies(view: viewController, router: self, loadFeedInteractor: interactor))
 
-        view.presenter = presenter
-//        view.tableViewCustom = TableViewManager(data: [])
-//        view.postListTableView = UITableView()
-        return view
+        return viewController
     }
-    
-//    func openDetails(item: FeedVM) {
-//        print("12378651897236498176239487123")
-//    }
-}
 
-//class Router {
-//    func prepareModule() -> UIViewController {
-//        // создание экземпляров
-//        let view = UIViewController()
-//        let presenter = Presenter()
-//        let interactor = Interactor()
-//
-//        // сетап зависимостей
-//        view.presenter = presenter
-//        interactor.presenter = presenter
-//        presenter.view = view
-//        presenter.interactor = interactor
-//        presenter.router = self
-//
-//        return view
-//    }
-//}
+    func openDetails(item: FeedVM) {
+        print("routerOpen + \(item)")
+    }
+}
